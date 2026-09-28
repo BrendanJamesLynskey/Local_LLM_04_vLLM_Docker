@@ -829,7 +829,7 @@ nvidia-smi
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | \
   sudo gpg --dearmor -o /etc/apt/keyrings/nvidia-container-toolkit-keyring.gpg
 curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
-  sed <span class="str">'s#deb #e6ebc9 [signed-by=/etc/apt/keyrings/nvidia-container-toolkit-keyring.gpg] #'</span> \
+  sed <span class="str">'s#deb #deb [signed-by=/etc/apt/keyrings/nvidia-container-toolkit-keyring.gpg] #'</span> \
   | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 
 sudo apt update &amp;&amp; sudo apt install -y nvidia-container-toolkit
